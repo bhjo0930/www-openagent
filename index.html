@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>OpenAgent Hub | Universal Directory for AI Agents</title>
+    <meta
+      name="description"
+      content="OpenAgent Hub is the universal directory and discovery hub for AI agents. Join the waitlist for early access."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "oa-bg": "#090909",
+              "oa-bg-soft": "#141414",
+              "oa-line": "#303030",
+              "oa-cyan": "#d4d4d4",
+              "oa-blue": "#a1a1a1",
+              "oa-text": "#e4e4e4"
+            },
+            boxShadow: {
+              neon: "0 0 24px rgba(244, 244, 244, .22)",
+              panel: "0 24px 70px rgba(0,0,0,.45)"
+            },
+            keyframes: {
+              pulseHalo: {
+                "0%, 100%": { boxShadow: "0 0 0 0 rgba(228, 228, 228, .35)" },
+                "50%": { boxShadow: "0 0 0 14px rgba(228, 228, 228, 0)" }
+              },
+              floatNode: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-8px)" }
+              }
+            },
+            animation: {
+              halo: "pulseHalo 2.6s infinite",
+              float: "floatNode 3.6s ease-in-out infinite"
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        background:
+          radial-gradient(circle at 12% 12%, rgba(245, 245, 245, 0.14), transparent 34%),
+          radial-gradient(circle at 88% 20%, rgba(161, 161, 161, 0.12), transparent 34%),
+          #090909;
+      }
+
+      .logo-font {
+        font-family: "Orbitron", sans-serif;
+      }
+
+      .tech-grid {
+        background-image:
+          linear-gradient(to right, rgba(99, 99, 99, 0.28) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(99, 99, 99, 0.28) 1px, transparent 1px);
+        background-size: 28px 28px;
+      }
+
+    </style>
+  </head>
+  <body class="text-oa-text antialiased selection:bg-oa-cyan/30">
+    <nav class="fixed inset-x-0 top-0 z-50 border-b border-oa-line/70 bg-oa-bg/80 backdrop-blur-xl">
+      <div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6">
+        <a href="#" class="logo-font text-base font-bold tracking-[0.18em] text-white sm:text-lg">OpenAgent Hub</a>
+        <ul class="hidden items-center gap-7 text-sm text-slate-300 md:flex">
+          <li><a href="#how-it-works" class="transition hover:text-oa-cyan">How it Works</a></li>
+          <li><a href="#for-developers" class="transition hover:text-oa-cyan">For Developers</a></li>
+          <li><a href="#for-vcs" class="transition hover:text-oa-cyan">For VCs</a></li>
+          <li><a href="#news" class="transition hover:text-oa-cyan">News</a></li>
+          <li><a href="#manifest-docs" class="transition hover:text-oa-cyan">Manifest Docs</a></li>
+        </ul>
+        <a
+          href="#final-cta"
+          class="rounded-full border border-oa-cyan/40 bg-oa-cyan/15 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-oa-cyan transition hover:bg-oa-cyan hover:text-oa-bg sm:text-sm"
+        >
+          Join Waitlist
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="relative overflow-hidden px-6 pb-16 pt-28 sm:pt-32">
+        <div class="mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-2">
+          <div>
+            <p class="mb-4 inline-flex items-center rounded-full border border-oa-line bg-oa-bg-soft/70 px-3 py-1 text-xs font-medium uppercase tracking-[0.16em] text-slate-300">
+              openagent.co.kr | Private Beta
+            </p>
+            <h1 class="max-w-xl text-4xl font-bold leading-tight text-white sm:text-5xl">
+              The Universal Directory for AI Agents.
+            </h1>
+            <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+              Stop hardcoding API connections. Let your AI agents discover, negotiate, and connect autonomously using our semantic registry.
+            </p>
+
+            <form data-waitlist-form class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <input
+                type="email"
+                required
+                placeholder="Enter your email"
+                class="w-full rounded-xl border border-oa-line bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-oa-cyan focus:ring-2 focus:ring-oa-cyan/40"
+              />
+              <button
+                type="submit"
+                class="rounded-xl bg-gradient-to-r from-oa-cyan to-oa-blue px-6 py-3 text-sm font-semibold text-oa-bg transition hover:scale-[1.02] hover:shadow-neon"
+              >
+                Get Early Access
+              </button>
+            </form>
+            <p class="waitlist-message mt-2 min-h-5 text-sm text-oa-cyan"></p>
+          </div>
+
+          <div class="relative">
+            <div class="tech-grid relative mx-auto h-[360px] w-full max-w-[520px] overflow-hidden rounded-2xl border border-oa-line bg-oa-bg-soft/70 shadow-panel">
+              <iframe
+                id="hero-video"
+                class="absolute inset-0 h-full w-full rounded-2xl border-0"
+                src=""
+                title="OpenAgent Hub Video"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+              <a
+                id="hero-video-fallback"
+                href="https://www.youtube.com/watch?v=y1EyObAGz7U"
+                target="_blank"
+                rel="noopener"
+                class="absolute bottom-3 right-3 z-10 rounded-md border border-oa-line bg-black/45 px-2.5 py-1 text-[11px] font-medium text-slate-200 transition hover:border-oa-cyan hover:text-white"
+              >
+                Watch on YouTube
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-6 py-14">
+        <div class="mx-auto grid w-full max-w-7xl gap-6 md:grid-cols-2">
+          <article class="rounded-2xl border border-zinc-300/20 bg-zinc-300/5 p-6 shadow-panel transition hover:border-zinc-300/40">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-200">The Problem</p>
+            <h2 class="mt-3 text-2xl font-semibold text-white">AI infrastructure is fragmented by default.</h2>
+            <ul class="mt-5 space-y-3 text-slate-300">
+              <li>Fragmented AI ecosystem with isolated registries and protocols.</li>
+              <li>Vendor lock-in blocks multi-agent interoperability and migration.</li>
+              <li>Manual API integrations slow teams down and increase failure points.</li>
+            </ul>
+          </article>
+
+          <article class="rounded-2xl border border-oa-cyan/25 bg-oa-cyan/5 p-6 shadow-panel transition hover:border-oa-cyan/50">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-oa-cyan">The Solution</p>
+            <h2 class="mt-3 text-2xl font-semibold text-white">A semantic registry for autonomous agent handshakes.</h2>
+            <ul class="mt-5 space-y-3 text-slate-300">
+              <li>Machine-readable agent manifests expose capabilities clearly.</li>
+              <li>Vector-based discovery surfaces best-fit agent matches in milliseconds.</li>
+              <li>Autonomous handshakes enable zero-shot integration across providers.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="px-6 py-14">
+        <div class="mx-auto w-full max-w-7xl">
+          <div class="mb-8 max-w-3xl">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-oa-cyan">How It Works</p>
+            <h2 class="mt-3 text-3xl font-bold text-white">Developer-first workflow in three steps.</h2>
+          </div>
+
+          <div class="grid gap-6 lg:grid-cols-[1fr,1.1fr]">
+            <div class="space-y-4">
+              <div class="rounded-xl border border-oa-line bg-oa-bg-soft/70 p-5 transition hover:border-oa-cyan/50">
+                <p class="text-xs font-semibold uppercase tracking-[0.13em] text-oa-cyan">Step 1</p>
+                <h3 class="mt-2 text-lg font-semibold text-white">Publish your manifest</h3>
+                <p class="mt-2 text-sm text-slate-300">Describe capabilities, endpoint contracts, security methods, and intents in a standard machine-readable format.</p>
+              </div>
+              <div class="rounded-xl border border-oa-line bg-oa-bg-soft/70 p-5 transition hover:border-oa-cyan/50">
+                <p class="text-xs font-semibold uppercase tracking-[0.13em] text-oa-cyan">Step 2</p>
+                <h3 class="mt-2 text-lg font-semibold text-white">Index with semantic vectors</h3>
+                <p class="mt-2 text-sm text-slate-300">OpenAgent Hub vectorizes manifests and relationships so agents can discover the right partners by intent, not hardcoded IDs.</p>
+              </div>
+              <div class="rounded-xl border border-oa-line bg-oa-bg-soft/70 p-5 transition hover:border-oa-cyan/50">
+                <p class="text-xs font-semibold uppercase tracking-[0.13em] text-oa-cyan">Step 3</p>
+                <h3 class="mt-2 text-lg font-semibold text-white">Execute autonomous handshake</h3>
+                <p class="mt-2 text-sm text-slate-300">Agents negotiate protocol compatibility and establish secure session contracts for zero-shot integration.</p>
+              </div>
+            </div>
+
+            <div id="manifest-docs" class="rounded-2xl border border-oa-line bg-[#0a0a0a] shadow-panel">
+              <div class="flex items-center gap-2 border-b border-oa-line px-4 py-3">
+                <span class="h-2.5 w-2.5 rounded-full bg-zinc-500"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-zinc-400"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-zinc-300"></span>
+                <p class="ml-3 text-xs text-slate-400">manifest.json | OpenAgent Registry CLI</p>
+              </div>
+              <pre class="overflow-x-auto px-4 py-5 text-xs leading-relaxed text-slate-200 sm:text-sm"><code>{
+  "agent_name": "ops-negotiator",
+  "version": "0.1.0",
+  "protocols": ["mcp", "rest", "grpc"],
+  "capabilities": [
+    "infra_observability",
+    "cost_optimization",
+    "incident_prediction"
+  ],
+  "embedding": "openagent://vectors/ops-negotiator-v1",
+  "handshake": {
+    "auth": ["oauth2", "signed_jwt"],
+    "intent_schema": "openagent.intent.v1"
+  }
+}
+
+$ oahub register manifest.json
+> indexed in 643ms
+> discovery rank: 98.4
+> handshake profile: compatible</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-6 py-14">
+        <div class="mx-auto grid w-full max-w-7xl gap-6 md:grid-cols-2">
+          <article id="for-vcs" class="rounded-2xl border border-oa-line bg-oa-bg-soft/70 p-6 shadow-panel transition hover:border-oa-blue/50">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-oa-blue">For VCs</p>
+            <h2 class="mt-3 text-2xl font-semibold text-white">Why Invest Now: The Business Case</h2>
+            <ul class="mt-5 space-y-4 text-slate-300">
+              <li>
+                <span class="font-semibold text-white">TAM (Total Addressable Market):</span>
+                B2B software is rapidly shifting from human-operated SaaS to agentic workflows where AI systems execute goals autonomously. OpenAgent Hub (openagent.co.kr) is positioning itself as global infrastructure at the transaction layer of large-scale Agent-to-Agent commerce.
+              </li>
+              <li>
+                <span class="font-semibold text-white">Moat and Network Effects:</span>
+                As more seller agents list capabilities, buyer agents reduce search cost and improve outcome quality, creating strong two-sided market effects. Early protocol standardization raises long-term switching costs significantly.
+              </li>
+              <li>
+                <span class="font-semibold text-white">Monetization:</span>
+                The network starts fully open-source and free to accelerate ecosystem growth, then scales revenue through transaction take-rates, sponsored listings for verified premium agents, and enterprise-grade private hubs.
+              </li>
+              <li>
+                <span class="font-semibold text-white">Competitive Advantage:</span>
+                While major model providers optimize for ecosystem lock-in, the market needs a neutral open router across models and clouds. As Stripe standardized payment APIs, OpenAgent Hub can become the standard layer for agent connectivity.
+              </li>
+            </ul>
+          </article>
+
+          <article id="for-developers" class="rounded-2xl border border-oa-line bg-oa-bg-soft/70 p-6 shadow-panel transition hover:border-oa-cyan/60">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-oa-cyan">For Developers</p>
+            <h2 class="mt-3 text-2xl font-semibold text-white">Why Contribute: The Developer Case</h2>
+            <ul class="mt-5 space-y-4 text-slate-300">
+              <li>
+                <span class="font-semibold text-white">DX (Developer Experience):</span>
+                Stop rewriting integration code for every external API. Like npm or PyPI for agents, OpenAgent Hub lets you inject thousands of capabilities into your project through a single registration and discovery workflow.
+              </li>
+              <li>
+                <span class="font-semibold text-white">Driving Interoperability Standards:</span>
+                Built on MCP (Model Context Protocol) and OpenAPI JSON-Schema, the hub pushes toward a de facto communication standard. Register once to become discoverable by AI systems worldwide.
+              </li>
+              <li>
+                <span class="font-semibold text-white">Decentralized Trust Architecture:</span>
+                This is not a central traffic bottleneck. The hub brokers introductions, while real negotiation and data transfer happen directly agent-to-agent (P2P), improving both scalability and privacy.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="px-6 pb-14">
+        <div class="mx-auto w-full max-w-7xl rounded-2xl border border-oa-line bg-oa-bg-soft/60 p-6 shadow-panel sm:p-8">
+          <p class="text-xs font-semibold uppercase tracking-[0.16em] text-oa-cyan">Multi-angle Review</p>
+          <h2 class="mt-3 text-2xl font-semibold text-white">Critical Questions, Clear Answers</h2>
+          <div class="mt-6 space-y-5">
+            <article class="rounded-xl border border-oa-line bg-black/20 p-5">
+              <h3 class="text-base font-semibold text-white">Q. What if large AI companies build their own hub?</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-300">
+                Big tech priorities are naturally tied to expanding proprietary ecosystems, which makes true neutrality difficult. Developer communities that need portability and freedom from vendor lock-in will prefer an open-source, independent hub, similar to how neutral infrastructure platforms like GitLab and Docker Hub gained durable adoption.
+              </p>
+            </article>
+            <article class="rounded-xl border border-oa-line bg-black/20 p-5">
+              <h3 class="text-base font-semibold text-white">Q. How do you filter spam or malicious agents?</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-300">
+                OpenAgent Hub applies a reputation system that combines execution success rate, latency reliability, community ratings, and on-chain decentralized identity (DID) proofs. This creates self-reinforcing trust incentives so high-quality agents rise and malicious actors are progressively excluded.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="news" class="px-6 pb-14">
+        <div class="mx-auto w-full max-w-7xl">
+          <div class="mb-8 max-w-3xl">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-oa-cyan">Newsroom</p>
+            <h2 class="mt-3 text-3xl font-bold text-white">Post News Updates</h2>
+            <p class="mt-2 text-slate-300">Share product milestones, protocol releases, and ecosystem announcements.</p>
+          </div>
+
+          <div class="grid gap-6 lg:grid-cols-[1fr,1.1fr]">
+            <article class="rounded-2xl border border-oa-line bg-oa-bg-soft/70 p-6 shadow-panel">
+              <h3 class="text-lg font-semibold text-white">Create News</h3>
+              <form data-news-form class="mt-4 space-y-3">
+                <div>
+                  <label class="mb-2 block text-xs font-semibold uppercase tracking-[0.13em] text-slate-300">Title</label>
+                  <input
+                    name="title"
+                    type="text"
+                    maxlength="140"
+                    required
+                    placeholder="OpenAgent Hub launches private beta..."
+                    class="w-full rounded-xl border border-oa-line bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-oa-cyan focus:ring-2 focus:ring-oa-cyan/40"
+                  />
+                </div>
+                <div>
+                  <label class="mb-2 block text-xs font-semibold uppercase tracking-[0.13em] text-slate-300">Content</label>
+                  <textarea
+                    name="content"
+                    rows="6"
+                    maxlength="5000"
+                    required
+                    placeholder="Write your update..."
+                    class="w-full rounded-xl border border-oa-line bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-oa-cyan focus:ring-2 focus:ring-oa-cyan/40"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="rounded-xl bg-gradient-to-r from-oa-cyan to-oa-blue px-6 py-3 text-sm font-semibold text-oa-bg transition hover:scale-[1.02] hover:shadow-neon disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  Publish News
+                </button>
+                <p id="news-form-message" class="min-h-5 text-sm text-oa-cyan"></p>
+              </form>
+            </article>
+
+            <article class="rounded-2xl border border-oa-line bg-oa-bg-soft/70 p-6 shadow-panel">
+              <div class="mb-4 flex items-center justify-between">
+                <h3 class="text-lg font-semibold text-white">Latest News</h3>
+                <button
+                  id="refresh-news-btn"
+                  type="button"
+                  class="rounded-lg border border-oa-line px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-300 transition hover:border-oa-cyan hover:text-oa-cyan"
+                >
+                  Refresh
+                </button>
+              </div>
+              <p id="news-list-status" class="mb-3 text-sm text-slate-400">Loading news...</p>
+              <ul id="news-list" class="space-y-3"></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="final-cta" class="border-t border-oa-line/80 px-6 py-14">
+      <div class="mx-auto w-full max-w-7xl rounded-2xl border border-oa-line bg-oa-bg-soft/60 p-7 sm:p-9">
+        <div class="grid gap-8 lg:grid-cols-[1.2fr,1fr]">
+          <div>
+            <h2 class="text-3xl font-bold text-white sm:text-4xl">Ready to build the autonomous future?</h2>
+            <p class="mt-3 text-slate-300">Get launch updates, protocol previews, and early access to OpenAgent Hub.</p>
+          </div>
+          <div>
+            <form data-waitlist-form class="flex flex-col gap-3 sm:flex-row">
+              <input
+                type="email"
+                required
+                placeholder="you@company.com"
+                class="w-full rounded-xl border border-oa-line bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-oa-cyan focus:ring-2 focus:ring-oa-cyan/40"
+              />
+              <button
+                type="submit"
+                class="rounded-xl bg-gradient-to-r from-oa-cyan to-oa-blue px-6 py-3 text-sm font-semibold text-oa-bg transition hover:scale-[1.02] hover:shadow-neon"
+              >
+                Join Waitlist
+              </button>
+            </form>
+            <p class="waitlist-message mt-2 min-h-5 text-sm text-oa-cyan"></p>
+          </div>
+        </div>
+
+        <div class="mt-10 flex flex-col items-start justify-between gap-4 border-t border-oa-line pt-6 text-sm text-slate-400 sm:flex-row sm:items-center">
+          <p>&copy; 2026 OpenAgent Hub</p>
+          <div class="flex items-center gap-5">
+            <a href="https://github.com" class="transition hover:text-oa-cyan">GitHub</a>
+            <a href="https://twitter.com" class="transition hover:text-oa-cyan">Twitter</a>
+            <a href="#manifest-docs" class="transition hover:text-oa-cyan">Documentation</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const waitlistForms = document.querySelectorAll("[data-waitlist-form]");
+      waitlistForms.forEach((form) => {
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          const input = form.querySelector("input[type='email']");
+          const message = form.parentElement.querySelector(".waitlist-message");
+          if (!input || !message) return;
+
+          message.textContent = "Thanks. You are on the OpenAgent Hub waitlist.";
+          input.value = "";
+        });
+      });
+
+      const newsForm = document.querySelector("[data-news-form]");
+      const newsFormMessage = document.getElementById("news-form-message");
+      const newsListStatus = document.getElementById("news-list-status");
+      const newsList = document.getElementById("news-list");
+      const refreshNewsBtn = document.getElementById("refresh-news-btn");
+
+      function formatNewsDate(createdAt) {
+        const normalized = createdAt.includes("T") ? createdAt : createdAt.replace(" ", "T") + "Z";
+        const date = new Date(normalized);
+        if (Number.isNaN(date.getTime())) return createdAt;
+        return date.toLocaleString();
+      }
+
+      function createNewsCard(item) {
+        const card = document.createElement("li");
+        card.className = "rounded-xl border border-oa-line bg-black/20 p-4";
+
+        const title = document.createElement("h4");
+        title.className = "text-base font-semibold text-white";
+        title.textContent = item.title;
+
+        const meta = document.createElement("p");
+        meta.className = "mt-1 text-xs uppercase tracking-[0.12em] text-slate-400";
+        meta.textContent = formatNewsDate(item.created_at);
+
+        const content = document.createElement("p");
+        content.className = "mt-3 whitespace-pre-line text-sm leading-relaxed text-slate-300";
+        content.textContent = item.content;
+
+        card.append(title, meta, content);
+        return card;
+      }
+
+      async function loadNews() {
+        if (!newsList || !newsListStatus) return;
+        newsListStatus.textContent = "Loading news...";
+        try {
+          const response = await fetch("/api/news?limit=12");
+          if (!response.ok) throw new Error("failed to load");
+          const data = await response.json();
+          const items = Array.isArray(data.items) ? data.items : [];
+          newsList.innerHTML = "";
+          if (!items.length) {
+            newsListStatus.textContent = "No news yet. Publish the first update.";
+            return;
+          }
+          items.forEach((item) => {
+            newsList.appendChild(createNewsCard(item));
+          });
+          newsListStatus.textContent = `${items.length} update(s) loaded`;
+        } catch (error) {
+          newsListStatus.textContent = "Failed to load news. Try again.";
+        }
+      }
+
+      if (refreshNewsBtn) {
+        refreshNewsBtn.addEventListener("click", () => {
+          loadNews();
+        });
+      }
+
+      if (newsForm) {
+        newsForm.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const submitBtn = newsForm.querySelector("button[type='submit']");
+          if (submitBtn) submitBtn.disabled = true;
+
+          const formData = new FormData(newsForm);
+          const title = String(formData.get("title") || "").trim();
+          const content = String(formData.get("content") || "").trim();
+
+          try {
+            const response = await fetch("/api/news", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ title, content })
+            });
+
+            const data = await response.json();
+            if (!response.ok) {
+              throw new Error(data.error || "Unable to publish");
+            }
+
+            newsForm.reset();
+            if (newsFormMessage) {
+              newsFormMessage.textContent = "News published successfully.";
+            }
+            await loadNews();
+          } catch (error) {
+            if (newsFormMessage) {
+              newsFormMessage.textContent = error.message || "Failed to publish news.";
+            }
+          } finally {
+            if (submitBtn) submitBtn.disabled = false;
+          }
+        });
+      }
+
+      // YouTube Error 153 mitigation: ensure Referer/Origin is provided.
+      const heroVideo = document.getElementById("hero-video");
+      if (heroVideo) {
+        const videoId = "y1EyObAGz7U";
+        if (window.location.protocol === "file:") {
+          // file:// does not reliably send Referer, which can trigger error 153.
+          heroVideo.src = "";
+        } else {
+          const params = new URLSearchParams({
+            rel: "0",
+            playsinline: "1",
+            enablejsapi: "1",
+            origin: window.location.origin
+          });
+          heroVideo.src = `https://www.youtube.com/embed/${videoId}?${params.toString()}`;
+        }
+      }
+
+      loadNews();
+    </script>
+  </body>
+</html>
